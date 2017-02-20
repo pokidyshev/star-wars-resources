@@ -1,0 +1,2 @@
+json.extract! species, :id, :average_height, :average_lifespan, :classifiation, :designation, :eye_colors, :hair_colors, :language, :name, :skin_colors, :created_at, :updated_at
+json.url species_url(species, format: :json)

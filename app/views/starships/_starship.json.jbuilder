@@ -1,0 +1,2 @@
+json.extract! starship, :id, :MGLT, :cargo_capacity, :consumables, :cost_in_credits, :crew, :hyperdrive_rating, :length, :manufacturer, :max_atmosphering_speed, :model, :name, :passengers, :starship_class, :created_at, :updated_at
+json.url starship_url(starship, format: :json)

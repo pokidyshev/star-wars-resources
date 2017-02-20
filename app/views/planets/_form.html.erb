@@ -1,0 +1,62 @@
+<%= form_for(planet) do |f| %>
+  <% if planet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(planet.errors.count, "error") %> prohibited this planet from being saved:</h2>
+
+      <ul>
+      <% planet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :climate %>
+    <%= f.text_field :climate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :diameter %>
+    <%= f.text_field :diameter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gravity %>
+    <%= f.text_field :gravity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :orbital_period %>
+    <%= f.text_field :orbital_period %>
+  </div>
+
+  <div class="field">
+    <%= f.label :population %>
+    <%= f.text_field :population %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rotation_period %>
+    <%= f.text_field :rotation_period %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surface_water %>
+    <%= f.text_field :surface_water %>
+  </div>
+
+  <div class="field">
+    <%= f.label :terrain %>
+    <%= f.text_field :terrain %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Average height:</strong>
+  <%= @species.average_height %>
+</p>
+
+<p>
+  <strong>Average lifespan:</strong>
+  <%= @species.average_lifespan %>
+</p>
+
+<p>
+  <strong>Classifiation:</strong>
+  <%= @species.classifiation %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @species.designation %>
+</p>
+
+<p>
+  <strong>Eye colors:</strong>
+  <%= @species.eye_colors %>
+</p>
+
+<p>
+  <strong>Hair colors:</strong>
+  <%= @species.hair_colors %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @species.language %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @species.name %>
+</p>
+
+<p>
+  <strong>Skin colors:</strong>
+  <%= @species.skin_colors %>
+</p>
+
+<%= link_to 'Edit', edit_species_path(@species) %> |
+<%= link_to 'Back', species_index_path %>

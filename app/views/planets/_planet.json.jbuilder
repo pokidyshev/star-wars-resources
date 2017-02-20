@@ -1,0 +1,2 @@
+json.extract! planet, :id, :climate, :diameter, :gravity, :name, :orbital_period, :population, :rotation_period, :surface_water, :terrain, :created_at, :updated_at
+json.url planet_url(planet, format: :json)

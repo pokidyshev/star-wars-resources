@@ -1,0 +1,62 @@
+<%= form_for(species) do |f| %>
+  <% if species.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(species.errors.count, "error") %> prohibited this species from being saved:</h2>
+
+      <ul>
+      <% species.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :average_height %>
+    <%= f.text_field :average_height %>
+  </div>
+
+  <div class="field">
+    <%= f.label :average_lifespan %>
+    <%= f.text_field :average_lifespan %>
+  </div>
+
+  <div class="field">
+    <%= f.label :classifiation %>
+    <%= f.text_field :classifiation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :designation %>
+    <%= f.text_field :designation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :eye_colors %>
+    <%= f.text_field :eye_colors %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hair_colors %>
+    <%= f.text_field :hair_colors %>
+  </div>
+
+  <div class="field">
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :skin_colors %>
+    <%= f.text_field :skin_colors %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

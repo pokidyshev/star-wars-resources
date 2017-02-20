@@ -1,0 +1,72 @@
+<%= form_for(vehicle) do |f| %>
+  <% if vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+      <ul>
+      <% vehicle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cargo_capacity %>
+    <%= f.text_field :cargo_capacity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :consumables %>
+    <%= f.text_field :consumables %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost_in_credits %>
+    <%= f.text_field :cost_in_credits %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crew %>
+    <%= f.text_field :crew %>
+  </div>
+
+  <div class="field">
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+  </div>
+
+  <div class="field">
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :max_atmosphering_speed %>
+    <%= f.text_field :max_atmosphering_speed %>
+  </div>
+
+  <div class="field">
+    <%= f.label :madel %>
+    <%= f.text_field :madel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :passegners %>
+    <%= f.text_field :passegners %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vehicle_class %>
+    <%= f.text_field :vehicle_class %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

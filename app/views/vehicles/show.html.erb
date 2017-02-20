@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cargo capacity:</strong>
+  <%= @vehicle.cargo_capacity %>
+</p>
+
+<p>
+  <strong>Consumables:</strong>
+  <%= @vehicle.consumables %>
+</p>
+
+<p>
+  <strong>Cost in credits:</strong>
+  <%= @vehicle.cost_in_credits %>
+</p>
+
+<p>
+  <strong>Crew:</strong>
+  <%= @vehicle.crew %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @vehicle.length %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @vehicle.manufacturer %>
+</p>
+
+<p>
+  <strong>Max atmosphering speed:</strong>
+  <%= @vehicle.max_atmosphering_speed %>
+</p>
+
+<p>
+  <strong>Madel:</strong>
+  <%= @vehicle.madel %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vehicle.name %>
+</p>
+
+<p>
+  <strong>Passegners:</strong>
+  <%= @vehicle.passegners %>
+</p>
+
+<p>
+  <strong>Vehicle class:</strong>
+  <%= @vehicle.vehicle_class %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

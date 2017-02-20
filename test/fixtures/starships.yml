@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  MGLT: MyString
+  cargo_capacity: MyString
+  consumables: MyString
+  cost_in_credits: MyString
+  crew: MyString
+  hyperdrive_rating: MyString
+  length: MyString
+  manufacturer: MyString
+  max_atmosphering_speed: MyString
+  model: MyString
+  name: MyString
+  passengers: MyString
+  starship_class: MyString
+
+two:
+  MGLT: MyString
+  cargo_capacity: MyString
+  consumables: MyString
+  cost_in_credits: MyString
+  crew: MyString
+  hyperdrive_rating: MyString
+  length: MyString
+  manufacturer: MyString
+  max_atmosphering_speed: MyString
+  model: MyString
+  name: MyString
+  passengers: MyString
+  starship_class: MyString

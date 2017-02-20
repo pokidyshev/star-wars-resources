@@ -1,0 +1,82 @@
+<%= form_for(starship) do |f| %>
+  <% if starship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(starship.errors.count, "error") %> prohibited this starship from being saved:</h2>
+
+      <ul>
+      <% starship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :MGLT %>
+    <%= f.text_field :MGLT %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cargo_capacity %>
+    <%= f.text_field :cargo_capacity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :consumables %>
+    <%= f.text_field :consumables %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost_in_credits %>
+    <%= f.text_field :cost_in_credits %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crew %>
+    <%= f.text_field :crew %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hyperdrive_rating %>
+    <%= f.text_field :hyperdrive_rating %>
+  </div>
+
+  <div class="field">
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+  </div>
+
+  <div class="field">
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :max_atmosphering_speed %>
+    <%= f.text_field :max_atmosphering_speed %>
+  </div>
+
+  <div class="field">
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :passengers %>
+    <%= f.text_field :passengers %>
+  </div>
+
+  <div class="field">
+    <%= f.label :starship_class %>
+    <%= f.text_field :starship_class %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

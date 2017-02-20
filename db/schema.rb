@@ -137,9 +137,9 @@ ActiveRecord::Schema.define(version: 20170220132818) do
     t.string   "length"
     t.string   "manufacturer"
     t.string   "max_atmosphering_speed"
-    t.string   "madel"
+    t.string   "model"
     t.string   "name"
-    t.string   "passegners"
+    t.string   "passengers"
     t.string   "vehicle_class"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

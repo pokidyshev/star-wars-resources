@@ -8,9 +8,9 @@ class CreateVehicles < ActiveRecord::Migration[5.0]
       t.string :length
       t.string :manufacturer
       t.string :max_atmosphering_speed
-      t.string :madel
+      t.string :model
       t.string :name
-      t.string :passegners
+      t.string :passengers
       t.string :vehicle_class
 
       t.timestamps

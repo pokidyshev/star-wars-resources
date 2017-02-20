@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220101903) do
+ActiveRecord::Schema.define(version: 20170220132818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,31 @@ ActiveRecord::Schema.define(version: 20170220101903) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "films_people", id: false, force: :cascade do |t|
+    t.integer "film_id",   null: false
+    t.integer "person_id", null: false
+  end
+
+  create_table "films_planets", id: false, force: :cascade do |t|
+    t.integer "film_id",   null: false
+    t.integer "planet_id", null: false
+  end
+
+  create_table "films_species", id: false, force: :cascade do |t|
+    t.integer "film_id",    null: false
+    t.integer "species_id", null: false
+  end
+
+  create_table "films_starships", id: false, force: :cascade do |t|
+    t.integer "film_id",     null: false
+    t.integer "starship_id", null: false
+  end
+
+  create_table "films_vehicles", id: false, force: :cascade do |t|
+    t.integer "film_id",    null: false
+    t.integer "vehicle_id", null: false
+  end
+
   create_table "people", force: :cascade do |t|
     t.string   "birth_year"
     t.string   "eye_color"
@@ -35,8 +60,25 @@ ActiveRecord::Schema.define(version: 20170220101903) do
     t.string   "mass"
     t.string   "name"
     t.string   "skin_color"
+    t.integer  "planet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["planet_id"], name: "index_people_on_planet_id", using: :btree
+  end
+
+  create_table "people_species", id: false, force: :cascade do |t|
+    t.integer "person_id",  null: false
+    t.integer "species_id", null: false
+  end
+
+  create_table "people_starships", id: false, force: :cascade do |t|
+    t.integer "person_id",   null: false
+    t.integer "starship_id", null: false
+  end
+
+  create_table "people_vehicles", id: false, force: :cascade do |t|
+    t.integer "person_id",  null: false
+    t.integer "vehicle_id", null: false
   end
 
   create_table "planets", force: :cascade do |t|
@@ -63,8 +105,10 @@ ActiveRecord::Schema.define(version: 20170220101903) do
     t.string   "language"
     t.string   "name"
     t.string   "skin_colors"
+    t.integer  "planet_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.index ["planet_id"], name: "index_species_on_planet_id", using: :btree
   end
 
   create_table "starships", force: :cascade do |t|

@@ -9,6 +9,7 @@ class CreatePeople < ActiveRecord::Migration[5.0]
       t.string :mass
       t.string :name
       t.string :skin_color
+      t.belongs_to :planet
 
       t.timestamps
     end

@@ -10,6 +10,7 @@ class CreateSpecies < ActiveRecord::Migration[5.0]
       t.string :language
       t.string :name
       t.string :skin_colors
+      t.belongs_to :planet
 
       t.timestamps
     end

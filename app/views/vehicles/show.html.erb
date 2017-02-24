@@ -1,4 +1,22 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @vehicle.name %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @vehicle.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @vehicle.model %>
+</p>
+
+<p>
+  <strong>Vehicle class:</strong>
+  <%= @vehicle.vehicle_class %>
+</p>
 
 <p>
   <strong>Cargo capacity:</strong>
@@ -26,34 +44,12 @@
 </p>
 
 <p>
-  <strong>Manufacturer:</strong>
-  <%= @vehicle.manufacturer %>
-</p>
-
-<p>
   <strong>Max atmosphering speed:</strong>
   <%= @vehicle.max_atmosphering_speed %>
 </p>
 
-<p>
-  <strong>Madel:</strong>
-  <%= @vehicle.madel %>
-</p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @vehicle.name %>
+  <strong>Passengers:</strong>
+  <%= @vehicle.passengers %>
 </p>
-
-<p>
-  <strong>Passegners:</strong>
-  <%= @vehicle.passegners %>
-</p>
-
-<p>
-  <strong>Vehicle class:</strong>
-  <%= @vehicle.vehicle_class %>
-</p>
-
-<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', vehicles_path %>

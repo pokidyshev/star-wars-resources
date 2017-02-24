@@ -1,34 +1,51 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, @film.title) %>
 
-<p>
-  <strong>Director:</strong>
-  <%= @film.director %>
-</p>
+<h1>Episode <%= @film.episode_id %>: <%= @film.title %></h1>
+<h2>by <%= @film.director %></h2>
 
-<p>
-  <strong>Episode:</strong>
-  <%= @film.episode_id %>
-</p>
-
-<p>
-  <strong>Opening crawl:</strong>
-  <%= @film.opening_crawl %>
+<p class="center-justified">
+  <%= h(@film.opening_crawl).gsub(/\n/, '<br>').html_safe %>
 </p>
 
 <p>
   <strong>Producer:</strong>
   <%= @film.producer %>
-</p>
-
-<p>
+  <br>
   <strong>Release date:</strong>
   <%= @film.release_date %>
 </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @film.title %>
-</p>
+<details>
+  <summary>Characters</summary>
+  <% @film.people.each do |person| %>
+      <%= link_to person.name, person_path(person) %> <br>
+  <% end %>
+</details>
 
-<%= link_to 'Edit', edit_film_path(@film) %> |
-<%= link_to 'Back', films_path %>
+<details>
+  <summary>Planets</summary>
+  <% @film.planets.each do |planet| %>
+      <%= link_to planet.name, planet_path(planet) %> <br>
+  <% end %>
+</details>
+
+<details>
+  <summary>Species</summary>
+  <% @film.species.each do |spec| %>
+      <%= link_to spec.name, species_path(spec) %> <br>
+  <% end %>
+</details>
+
+<details>
+  <summary>Starships</summary>
+  <% @film.starships.each do |ship| %>
+      <%= link_to ship.name, starship_path(ship) %> <br>
+  <% end %>
+</details>
+
+<details>
+  <summary>Vehicles</summary>
+  <% @film.vehicles.each do |vehicle| %>
+      <%= link_to vehicle.name, vehicle_path(vehicle) %> <br>
+  <% end %>
+</details>

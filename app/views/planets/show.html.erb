@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @planet.name %>
+</p>
 
 <p>
   <strong>Climate:</strong>
@@ -13,11 +16,6 @@
 <p>
   <strong>Gravity:</strong>
   <%= @planet.gravity %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @planet.name %>
 </p>
 
 <p>
@@ -44,6 +42,3 @@
   <strong>Terrain:</strong>
   <%= @planet.terrain %>
 </p>
-
-<%= link_to 'Edit', edit_planet_path(@planet) %> |
-<%= link_to 'Back', planets_path %>

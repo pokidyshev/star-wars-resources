@@ -1,37 +1,27 @@
-<p id="notice"><%= notice %></p>
-
+<% provide(:title, 'Films') %>
 <h1>Films</h1>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th>Director</th>
       <th>Episode</th>
-      <th>Opening crawl</th>
-      <th>Producer</th>
-      <th>Release date</th>
       <th>Title</th>
+      <th>Release date</th>
+      <th>Director</th>
+      <th>Producer</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @films.each do |film| %>
-      <tr>
-        <td><%= film.director %></td>
+      <tr class="clickable-row" data-href="<%= film_path(film) %>">
         <td><%= film.episode_id %></td>
-        <td><%= film.opening_crawl %></td>
-        <td><%= film.producer %></td>
-        <td><%= film.release_date %></td>
         <td><%= film.title %></td>
-        <td><%= link_to 'Show', film %></td>
-        <td><%= link_to 'Edit', edit_film_path(film) %></td>
-        <td><%= link_to 'Destroy', film, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= film.release_date %></td>
+        <td><%= film.director %></td>
+        <td><%= film.producer %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Film', new_film_path %>

@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @person.gender %>
+</p>
 
 <p>
   <strong>Birth year:</strong>
@@ -6,13 +14,13 @@
 </p>
 
 <p>
-  <strong>Eye color:</strong>
-  <%= @person.eye_color %>
+  <strong>Skin color:</strong>
+  <%= @person.skin_color %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
-  <%= @person.gender %>
+  <strong>Eye color:</strong>
+  <%= @person.eye_color %>
 </p>
 
 <p>
@@ -29,16 +37,3 @@
   <strong>Mass:</strong>
   <%= @person.mass %>
 </p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @person.name %>
-</p>
-
-<p>
-  <strong>Skin color:</strong>
-  <%= @person.skin_color %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>

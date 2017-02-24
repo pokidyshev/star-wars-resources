@@ -1,47 +1,34 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Vehicles</h1>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Vehicle class</th>
       <th>Cargo capacity</th>
       <th>Consumables</th>
-      <th>Cost in credits</th>
       <th>Crew</th>
       <th>Length</th>
-      <th>Manufacturer</th>
-      <th>Max atmosphering speed</th>
-      <th>Madel</th>
-      <th>Name</th>
-      <th>Passegners</th>
-      <th>Vehicle class</th>
+      <th>Passengers</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @vehicles.each do |vehicle| %>
-      <tr>
+      <tr class="clickable-row" data-href="<%= vehicle_path(vehicle) %>">
+        <td><%= vehicle.name %></td>
+        <td><%= vehicle.manufacturer %></td>
+        <td><%= vehicle.model %></td>
+        <td><%= vehicle.vehicle_class %></td>
         <td><%= vehicle.cargo_capacity %></td>
         <td><%= vehicle.consumables %></td>
-        <td><%= vehicle.cost_in_credits %></td>
         <td><%= vehicle.crew %></td>
         <td><%= vehicle.length %></td>
-        <td><%= vehicle.manufacturer %></td>
-        <td><%= vehicle.max_atmosphering_speed %></td>
-        <td><%= vehicle.madel %></td>
-        <td><%= vehicle.name %></td>
-        <td><%= vehicle.passegners %></td>
-        <td><%= vehicle.vehicle_class %></td>
-        <td><%= link_to 'Show', vehicle %></td>
-        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= vehicle.passengers %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Vehicle', new_vehicle_path %>

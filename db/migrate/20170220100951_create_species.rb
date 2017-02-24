@@ -3,7 +3,7 @@ class CreateSpecies < ActiveRecord::Migration[5.0]
     create_table :species do |t|
       t.string :average_height
       t.string :average_lifespan
-      t.string :classifiation
+      t.string :classification
       t.string :designation
       t.string :eye_colors
       t.string :hair_colors

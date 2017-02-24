@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
-
+<p>
+  <strong>Name:</strong>
+  <%= @species.name %>
+</p>
 <p>
   <strong>Average height:</strong>
   <%= @species.average_height %>
@@ -11,8 +13,8 @@
 </p>
 
 <p>
-  <strong>Classifiation:</strong>
-  <%= @species.classifiation %>
+  <strong>Classification:</strong>
+  <%= @species.classification %>
 </p>
 
 <p>
@@ -36,14 +38,6 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @species.name %>
-</p>
-
-<p>
   <strong>Skin colors:</strong>
   <%= @species.skin_colors %>
 </p>
-
-<%= link_to 'Edit', edit_species_path(@species) %> |
-<%= link_to 'Back', species_index_path %>

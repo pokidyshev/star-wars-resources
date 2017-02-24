@@ -1,17 +1,17 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'People') %>
 
 <h1>People</h1>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
+      <th>Name</th>
+      <th>Gender</th>
       <th>Birth year</th>
       <th>Eye color</th>
-      <th>Gender</th>
       <th>Hair color</th>
       <th>Height</th>
       <th>Mass</th>
-      <th>Name</th>
       <th>Skin color</th>
       <th colspan="3"></th>
     </tr>
@@ -19,23 +19,16 @@
 
   <tbody>
     <% @people.each do |person| %>
-      <tr>
+      <tr class="clickable-row" data-href="<%= person_path(person) %>">
+        <td><%= person.name %></td>
+        <td><%= person.gender %></td>
         <td><%= person.birth_year %></td>
         <td><%= person.eye_color %></td>
-        <td><%= person.gender %></td>
         <td><%= person.hair_color %></td>
         <td><%= person.height %></td>
         <td><%= person.mass %></td>
-        <td><%= person.name %></td>
         <td><%= person.skin_color %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Person', new_person_path %>

@@ -178,7 +178,7 @@ loop do
     spec = Species.create(id: id_from_url(item['url']),
                           average_height: item['average_height'],
                           average_lifespan: item['average_lifespan'],
-                          classifiation: item['classifiation'],
+                          classification: item['classification'],
                           designation: item['designation'],
                           eye_colors: item['eye_colors'],
                           hair_colors: item['hair_colors'],

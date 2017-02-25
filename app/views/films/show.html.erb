@@ -15,37 +15,8 @@
   <%= @film.release_date %>
 </p>
 
-<details>
-  <summary>Characters</summary>
-  <% @film.people.each do |person| %>
-      <%= link_to person.name, person_path(person) %> <br>
-  <% end %>
-</details>
 
-<details>
-  <summary>Planets</summary>
-  <% @film.planets.each do |planet| %>
-      <%= link_to planet.name, planet_path(planet) %> <br>
-  <% end %>
-</details>
-
-<details>
-  <summary>Species</summary>
-  <% @film.species.each do |spec| %>
-      <%= link_to spec.name, species_path(spec) %> <br>
-  <% end %>
-</details>
-
-<details>
-  <summary>Starships</summary>
-  <% @film.starships.each do |ship| %>
-      <%= link_to ship.name, starship_path(ship) %> <br>
-  <% end %>
-</details>
-
-<details>
-  <summary>Vehicles</summary>
-  <% @film.vehicles.each do |vehicle| %>
-      <%= link_to vehicle.name, vehicle_path(vehicle) %> <br>
-  <% end %>
-</details>
+<%= render partial: 'shared/spoilers', locals: {
+    summaries: %w(Characters Planets Species Starships Vehicles),
+    collections: [ @film.people, @film.planets, @film.species, @film.starships, @film.vehicles ]
+}%>

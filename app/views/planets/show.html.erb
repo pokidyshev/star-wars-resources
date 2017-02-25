@@ -1,3 +1,5 @@
+<% provide(:title, @planet.name) %>
+
 <p>
   <strong>Name:</strong>
   <%= @planet.name %>
@@ -42,3 +44,8 @@
   <strong>Terrain:</strong>
   <%= @planet.terrain %>
 </p>
+
+<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Films',
+                                                           collection: @planet.films.order :episode_id }%>
+<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Residents',
+                                                           collection: @planet.people }%>

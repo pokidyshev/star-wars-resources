@@ -1,3 +1,5 @@
+<% provide(:title, @person.name) %>
+
 <p>
   <strong>Name:</strong>
   <%= @person.name %>
@@ -37,3 +39,18 @@
   <strong>Mass:</strong>
   <%= @person.mass %>
 </p>
+
+<p>
+  <strong>Homeworld:</strong>
+  <%= link_to @person.planet.name, @person.planet %>
+</p>
+
+
+<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Films',
+                                                           collection: @person.films.order :episode_id }%>
+<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Species',
+                                                           collection: @person.species }%>
+<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Starships',
+                                                           collection: @person.starships }%>
+<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Vehicles',
+                                                           collection: @person.vehicles }%>

@@ -1,0 +1,10 @@
+<% summaries.zip(collections).each do |summary, collection| %>
+  <details>
+    <summary><%= summary %></summary>
+    <ul>
+      <% collection.each do |item| %>
+          <li><%= link_to item.name, item %></li>
+      <% end %>
+    </ul>
+  </details>
+<% end %>

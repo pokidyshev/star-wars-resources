@@ -35,6 +35,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'rest-client'
 gem 'devise'
+gem 'rails_admin', '~> 1.0'
+gem 'cancancan'
+gem 'paperclip', '~> 5.0.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

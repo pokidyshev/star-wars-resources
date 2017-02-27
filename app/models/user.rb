@@ -10,4 +10,10 @@ class User < ApplicationRecord
          # :lockable,
          # :omniauthable,
          :timeoutable
+
+  ROLES = %i(admin).freeze
+
+  def admin?
+    role == 'admin'
+  end
 end

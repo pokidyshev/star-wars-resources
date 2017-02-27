@@ -3,6 +3,8 @@
 <h1>Episode <%= @film.episode_id %>: <%= @film.title %></h1>
 <h2>by <%= @film.director %></h2>
 
+<%= image_tag @film.poster.url %>
+
 <p class="center-justified">
   <%= h(@film.opening_crawl).gsub(/\n/, '<br>').html_safe %>
 </p>

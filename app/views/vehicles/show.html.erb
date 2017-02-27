@@ -55,3 +55,9 @@
   <strong>Passengers:</strong>
   <%= @vehicle.passengers %>
 </p>
+
+
+<%= render partial: 'shared/spoilers', locals: {
+    summaries: %w(Films Pilots),
+    collections: [ @vehicle.films, @vehicle.people ]
+}%>

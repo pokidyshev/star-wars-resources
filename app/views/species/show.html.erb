@@ -43,3 +43,13 @@
   <strong>Skin colors:</strong>
   <%= @species.skin_colors %>
 </p>
+
+<p>
+  <strong>Homeworld:</strong>
+  <%= link_to @species.planet.name, @species.planet %>
+</p>
+
+<%= render partial: 'shared/spoilers', locals: {
+    summaries: %w(Films People),
+    collections: [ @species.films, @species.people ]
+}%>

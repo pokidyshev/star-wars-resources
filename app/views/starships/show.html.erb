@@ -66,3 +66,8 @@
   <strong>Starship class:</strong>
   <%= @starship.starship_class %>
 </p>
+
+<%= render partial: 'shared/spoilers', locals: {
+    summaries: %w(Films Pilots),
+    collections: [ @starship.films, @starship.people ]
+}%>

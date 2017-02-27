@@ -45,7 +45,7 @@
   <%= @planet.terrain %>
 </p>
 
-<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Films',
-                                                           collection: @planet.films.order :episode_id }%>
-<%= render partial: 'shared/collection_spoiler', locals: { summary: 'Residents',
-                                                           collection: @planet.people }%>
+<%= render partial: 'shared/spoilers', locals: {
+    summaries: %w(Films Residents),
+    collections: [ @planet.films, @planet.people ]
+}%>

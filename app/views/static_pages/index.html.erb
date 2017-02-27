@@ -1,65 +1,15 @@
-<!--<div class="center jumbotron">
-  <h1>List of available resources:</h1>
-
-  <div class="list-group">
-    <%#= link_to "Films", films_path, :class=>"list-group-item" %>
-    <%#= link_to "People", people_path, :class=>"list-group-item" %>
-    <%#= link_to "Planets", planets_path, :class=>"list-group-item" %>
-    <%#= link_to "Species", species_index_path, :class=>"list-group-item" %>
-    <%#= link_to "Starships", starships_path, :class=>"list-group-item" %>
-    <%#= link_to "Vehicles", vehicles_path, :class=>"list-group-item" %>
-  </div>
-</div>
--->
-
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-success">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
+    <%= render partial: 'panel', locals: { path: films_path, title: 'Films', img: 'sw.jpg' } %>
+    <%= render partial: 'panel', locals: { path: people_path, title: 'People', img: 'sw.jpg' } %>
+    <%= render partial: 'panel', locals: { path: planets_path, title: 'Planets', img: 'sw.jpg' } %>
   </div>
 </div><br>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-      </div>
-    </div>
+    <%= render partial: 'panel', locals: { path: species_index_path, title: 'Species', img: 'sw.jpg' } %>
+    <%= render partial: 'panel', locals: { path: starships_path, title: 'Starships', img: 'sw.jpg' } %>
+    <%= render partial: 'panel', locals: { path: vehicles_path, title: 'Vehicles', img: 'sw.jpg' } %>
   </div>
 </div><br><br>

@@ -2,14 +2,14 @@ RailsAdmin.config do |config|
 
   ### Popular gems integration
 
-  ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  # == Devise ==
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
 
-  ## == Cancan ==
-  # config.authorize_with :cancan
+  # == Cancan ==
+  config.authorize_with :cancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -37,5 +37,21 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+  end
+
+  config.model 'Planet' do
+    exclude_fields :species
+  end
+
+  config.model 'Person' do
+    configure :planet do
+      label 'Homeworld'
+    end
+  end
+
+  config.model 'Species' do
+    configure :planet do
+      label 'Homeworld'
+    end
   end
 end

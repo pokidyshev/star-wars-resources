@@ -11,6 +11,9 @@ class Film < ApplicationRecord
 
   validates_attachment_content_type :poster, content_type: %r{\Aimage\/.*\z}
 
+  attr_accessor :delete_poster
+  before_validation { self.poster.clear if self.delete_poster == '1' }
+
   def name
     title
   end

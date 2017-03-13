@@ -2,33 +2,12 @@
 
 <h1>People</h1>
 
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Gender</th>
-      <th>Birth year</th>
-      <th>Eye color</th>
-      <th>Hair color</th>
-      <th>Height</th>
-      <th>Mass</th>
-      <th>Skin color</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="people_table" class="container">
+  <%= render partial: 'people_table', locals: { people: @people } %>
+</div>
 
-  <tbody>
-    <% @people.each do |person| %>
-      <tr class="clickable-row" data-href="<%= person_path(person) %>">
-        <td><%= person.name %></td>
-        <td><%= person.gender %></td>
-        <td><%= person.birth_year %></td>
-        <td><%= person.eye_color %></td>
-        <td><%= person.hair_color %></td>
-        <td><%= person.height %></td>
-        <td><%= person.mass %></td>
-        <td><%= person.skin_color %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<ul class="pagination">
+  <% 1.upto(@pages_n) do |i| %>
+      <li><%= link_to i, fetch_people_path(page: i), remote: true %></li>
+  <% end %>
+</ul>

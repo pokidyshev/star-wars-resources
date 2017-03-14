@@ -2,7 +2,6 @@ class PeopleController < ApplicationController
   before_action :setup, except: :show
 
   def index
-    @pages_n = Person.pages_number 8
   end
 
   def fetch
@@ -16,6 +15,8 @@ class PeopleController < ApplicationController
   private
 
   def setup
-    @people = Person.page(params[:page], 8)
+    @pages_n = Person.pages_number params[:per_page]
+    @page = params[:page] || 1 # first page by default
+    @people = Person.page @page, params[:per_page]
   end
 end

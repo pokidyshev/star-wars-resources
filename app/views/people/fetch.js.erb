@@ -1,1 +1,4 @@
-$("#people_table").html("<%= escape_javascript(render partial: 'people_table', locals: { people: @people } ) %>");
+$("#people_table")
+  .html("<%= escape_javascript(render partial: 'people_table', locals: { people: @people } ) %>");
+$("#people_pagination")
+  .html("<%= escape_javascript(render partial: 'pagination', locals: { pages_n: @pages_n, page: @page } ) %>");

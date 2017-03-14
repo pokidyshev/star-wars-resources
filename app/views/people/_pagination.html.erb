@@ -1,0 +1,5 @@
+<ul class="pagination">
+  <% 1.upto(pages_n) do |i| %>
+      <%= content_tag :li, content_tag(:a, i), class: page_class(i, page), value: i %>
+  <% end %>
+</ul>
